@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Webapp</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="js/Slides.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build_KIPiA-2_V01.json", { onProgress: UnityProgress });
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<div class="webgl-content">
+    <div id="unityContainer" style="width: 1280px; height: 720px"></div>
+    <div class="footer">
+        <div class="webgl-logo" onclick="unityInstance.SetFullscreen(1)" ></div>
+
+
+        <div class="fullscreen"></div>
+        <!--            <div class="title" hidden>Webapp</div>
+        -->
+    </div>
+</div>
+
+<div id="overlay" class="overlay" style="position: absolute; top: 48%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 1280px; height: 720px ">
+    <img id="image" src="Slides/1.jpg" alt="" style="position: absolute; top: 48%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 1280px; height: 720px ">
+    <div style="position: absolute; bottom: 5%; left: 30%" align="bottom">
+        <button id="buttonLeft" class="arrow-3" onclick="SlideImage(false)" style="background: transparent; border: none">
+            <svg class="arrow-3-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="transform: rotate(180deg)" viewBox="0 0 32 32">
+                <g fill="none" stroke="#e76816" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                    <circle class="arrow-3-iconcircle" cx="16" cy="16" r="15.12"></circle>
+                    <path class="arrow-3-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                </g>
+            </svg>
+            подсказка</button>
+    </div> <!-- Предыдущая подсказка -->
+    <div style="position: absolute; bottom: 5%; right: 30%" align="bottom">
+        <button id="buttonRight" class="arrow-3" onclick="SlideImage(true)" style="background: transparent; border: none">подсказка
+            <svg class="arrow-3-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <g fill="none" stroke="#e76816" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                    <circle class="arrow-3-iconcircle" cx="16" cy="16" r="15.12"></circle>
+                    <path class="arrow-3-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                </g>
+            </svg>
+        </button>
+    </div> <!-- Следующая подсказка -->
+    <div style="position: absolute; bottom: 60%; left: 50%" align="bottom">
+        <div id="message">
+            <button class="buttonStart">
+                <div class="cssload-bell">
+                    <div class="cssload-circle">
+                        <div class="cssload-inner"></div>
+                    </div>
+                    <div class="cssload-circle">
+                        <div class="cssload-inner"></div>
+                    </div>
+                    <div class="cssload-circle">
+                        <div class="cssload-inner"></div>
+                    </div>
+                    <div class="cssload-circle">
+                        <div class="cssload-inner"></div>
+                    </div>
+                    <div class="cssload-circle">
+                        <div class="cssload-inner"></div>
+                    </div>
+                </div>
+            </button><br>
+        </div>
+
+        <div class="butcontainer">
+            <div>
+                  <button id="start" hidden class="button24" onclick="StartTest() ">Начать тест</button>
+            </div>
+        </div>
+
+    </div> <!-- Загрузка -->
+</div>
+</body>
+</html>

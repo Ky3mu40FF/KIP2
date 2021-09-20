@@ -1,0 +1,302 @@
+.webgl-content, .overlay, .button * {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+.overlay {
+
+    top: 48%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 1280px;
+    height: 720px;
+}
+.webgl-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+    .webgl-content .logo, .progress {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .webgl-content .logo {
+        background: url('progressLogo.Light.png') no-repeat center / contain;
+        width: 154px;
+        height: 130px;
+    }
+
+    .webgl-content .progress {
+        height: 18px;
+        width: 141px;
+        margin-top: 90px;
+    }
+
+        .webgl-content .progress .empty {
+            background: url('progressEmpty.Light.png') no-repeat right / cover;
+            float: right;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+
+        .webgl-content .progress .full {
+            background: url('progressFull.Light.png') no-repeat left / cover;
+            float: left;
+            width: 0%;
+            height: 100%;
+            display: inline-block;
+        }
+
+    .webgl-content .logo.Dark {
+        background-image: url('progressLogo.Dark.png');
+    }
+
+    .webgl-content .progress.Dark .empty {
+        background-image: url('progressEmpty.Dark.png');
+    }
+
+    .webgl-content .progress.Dark .full {
+        background-image: url('progressFull.Dark.png');
+    }
+
+    .webgl-content .footer {
+        margin-top: 5px;
+        height: 38px;
+        line-height: 38px;
+        font-family: Helvetica, Verdana, Arial, sans-serif;
+        font-size: 18px;
+    }
+
+        .webgl-content .footer .webgl-logo, .title, .message, .fullscreen .button {
+            height: 100%;
+            display: inline-block;
+            background: transparent center no-repeat;
+        }
+
+        .webgl-content .footer .webgl-logo {
+            background-image: url('webgl-logo.png');
+            width: 204px;
+            float: right;
+        }
+
+        .webgl-content .footer .title {
+            margin-right: 10px;
+            float: right;
+        }
+
+        .webgl-content .footer .message {
+            margin-left: 10px;
+            float: left;
+        }
+
+        .webgl-content .footer .fullscreen {
+            background-image: url('fullscreen.png');
+            width: 38px;
+            float: right;
+        }
+
+.button {
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    vertical-align: central;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    color:lime;
+    background: transparent;
+    border: none;
+}
+.buttonStart {
+    vertical-align: central;
+    horiz-align: center;
+    border-style: none;
+    background: transparent;
+}
+
+button.button24 {
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+    left: calc(50% - 100px);
+
+}
+.butcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+button.button24:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
+button.button24:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
+
+
+.cssload-bell {
+    width: 197px;
+    height: 199px;
+    border-radius: 100%;
+    position: absolute;
+    left: calc(50% - 100px);
+}
+
+.cssload-circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.cssload-circle .cssload-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 5px solid rgba(0,255,170,0.7);
+    border-right: none;
+    border-top: none;
+    background-clip: padding;
+    box-shadow: inset 0px 0px 10px rgba(0,255,170,0.15);
+}
+
+.cssload-circle:nth-of-type(0) {
+    transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+}
+.cssload-circle:nth-of-type(0) .cssload-inner {
+    animation: cssload-spin 2.3s infinite linear;
+    -o-animation: cssload-spin 2.3s infinite linear;
+    -ms-animation: cssload-spin 2.3s infinite linear;
+    -webkit-animation: cssload-spin 2.3s infinite linear;
+    -moz-animation: cssload-spin 2.3s infinite linear;
+}
+
+.cssload-circle:nth-of-type(1) {
+    transform: rotate(70deg);
+    -o-transform: rotate(70deg);
+    -ms-transform: rotate(70deg);
+    -webkit-transform: rotate(70deg);
+    -moz-transform: rotate(70deg);
+}
+.cssload-circle:nth-of-type(1) .cssload-inner {
+    animation: cssload-spin 2.3s infinite linear;
+    -o-animation: cssload-spin 2.3s infinite linear;
+    -ms-animation: cssload-spin 2.3s infinite linear;
+    -webkit-animation: cssload-spin 2.3s infinite linear;
+    -moz-animation: cssload-spin 2.3s infinite linear;
+}
+
+.cssload-circle:nth-of-type(2) {
+    transform: rotate(140deg);
+    -o-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    -moz-transform: rotate(140deg);
+}
+.cssload-circle:nth-of-type(2) .cssload-inner {
+    animation: cssload-spin 2.3s infinite linear;
+    -o-animation: cssload-spin 2.3s infinite linear;
+    -ms-animation: cssload-spin 2.3s infinite linear;
+    -webkit-animation: cssload-spin 2.3s infinite linear;
+    -moz-animation: cssload-spin 2.3s infinite linear;
+}
+
+.cssload-bell {
+    animation: cssload-spin 5.75s infinite linear;
+    -o-animation: cssload-spin 5.75s infinite linear;
+    -ms-animation: cssload-spin 5.75s infinite linear;
+    -webkit-animation: cssload-spin 5.75s infinite linear;
+    -moz-animation: cssload-spin 5.75s infinite linear;
+}
+
+
+
+@keyframes cssload-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes cssload-spin {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes cssload-spin {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes cssload-spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes cssload-spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+
+.arrow-3 {
+    color: #e76816;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    height: 22px;
+    line-height: 22px;
+    display: inline-block;
+    margin: 20px;
+    font-family: Calibri;
+}
+.arrow-3 .arrow-3-icon {
+    position: relative;
+    horiz-align: left;
+    top: -1px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+}
+.arrow-3 .arrow-3-iconcircle {
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+}
+.arrow-3:hover .arrow-3-icon {
+    transform: translate3d(5px, 0, 0);
+}
+.arrow-3:hover .arrow-3-iconcircle {
+    stroke-dashoffset: 0;
+}
